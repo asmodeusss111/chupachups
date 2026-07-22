@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10081f" />
+  <meta name="description" content="Самое важное голосование в истории человечества." />
+  <title>Голосование за Чупачупса</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="orb orb--one" aria-hidden="true"></div>
+  <div class="orb orb--two" aria-hidden="true"></div>
+  <div class="orb orb--three" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="vote-card" aria-labelledby="vote-title">
+      <div class="eyebrow">
+        <span class="eyebrow__dot"></span>
+        НАРОДНОЕ ГОЛОСОВАНИЕ
+      </div>
+
+      <div class="candy" aria-hidden="true">
+        <div class="candy__shine"></div>
+        <div class="candy__swirl candy__swirl--one"></div>
+        <div class="candy__swirl candy__swirl--two"></div>
+        <div class="candy__stick"></div>
+      </div>
+
+      <h1 id="vote-title">СЕТАЕМ ЧУПАЧУПСУ<br><span>ПОЛОВИНУ РЕП?</span></h1>
+      <p class="subtitle">Решение принимается строго демократическим путём.</p>
+
+      <div class="action-zone" id="action-zone">
+        <button class="button button--yes" id="yes-button" type="button">
+          <span>ДА</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m5 12 4 4L19 6" />
+          </svg>
+        </button>
+
+        <button class="button button--no" id="no-button" type="button" tabindex="-1" aria-label="Нет — эту кнопку поймать невозможно">
+          НЕТ
+        </button>
+      </div>
+
+      <p class="hint" id="hint">Выбирай внимательно. Хотя выбор тут один.</p>
+
+      <section class="stats" aria-label="Статистика голосования">
+        <div class="stats__header">
+          <span>МИНИ-СТАТА</span>
+          <span class="status" id="status"><i></i> ОБНОВЛЯЕТСЯ</span>
+        </div>
+
+        <div class="stats__grid">
+          <article class="stat-card">
+            <span class="stat-card__label">ГОЛОСОВ «ДА»</span>
+            <strong id="vote-count">—</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">ПОДДЕРЖКА</span>
+            <strong id="support-rate">100%</strong>
+          </article>
+        </div>
+
+        <div class="progress" aria-hidden="true">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+        <p class="stats__note" id="stats-note">Загружаем результаты великого референдума…</p>
+      </section>
+    </section>
+
+    <footer>© 2026 • результаты абсолютно серьёзные</footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
